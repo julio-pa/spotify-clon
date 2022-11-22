@@ -4,8 +4,9 @@ import SpotifyWebApi from 'spotify-web-api-js';
 import './App.css';
 import Login from './components/Login/login';
 import Player from './components/Player/Player';
-import { selectToken, SET_TOKEN } from './Features/TokenSlice';
-import { selectUser, SET_USER } from './Features/UserSlice';
+import { SET_PLAYLIST } from './features/PlaylistSlice';
+import { selectToken, SET_TOKEN } from './features/TokenSlice';
+import { selectUser, SET_USER } from './features/UserSlice';
 import { getTokenFromURL } from './spotifyLogic';
 
 const spotify = new SpotifyWebApi();
@@ -25,7 +26,8 @@ function App() {
       spotify.setAccessToken(_token);
       spotify.getMe().then(user => dispatch(SET_USER(user)));
       console.log(token);
-      spotify.getPlaylist().then(playlist => console.log(playlist))
+      spotify.getPlaylist("37i9dQZF1EQoqCH7BwIYb7").then(playlist => 
+        dispatch(SET_PLAYLIST(playlist)))
     }
 
   }, [dispatch, token]);

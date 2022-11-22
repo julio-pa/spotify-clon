@@ -14,11 +14,11 @@ const Footer = () => {
         </div>
       </FooterLeft>
       <FooterCenter>
-        <Shuffle />
-        <SkipPrevious />
-        <PlayCircleOutline />
-        <SkipNext />
-        <Repeat />
+        <Shuffle className='shuffle' />
+        <SkipPrevious className='iconprev' />
+        <PlayCircleOutline className='iconplay' />
+        <SkipNext className='iconnext' />
+        <Repeat className='repeat' />
       </FooterCenter>
       <FooterRight>
         <Grid container spacing={2}>

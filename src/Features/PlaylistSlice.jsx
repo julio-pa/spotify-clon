@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 export const playlistSlice = createSlice({
   name: "playlist",
   initialState:{
-    playlist:[],
+    playlist:null,
   },
   reduce:{
     SET_PLAYLIST:(state,action) =>{

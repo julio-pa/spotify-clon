@@ -30,6 +30,17 @@ const FooterCenter = styled.div`
   align-items: center;
   justify-content: space-between;
   max-width: 300px;
+  & .shuffle, .repeat, .iconplay, .iconprev, .iconnext{
+    color: #00ff00;
+    transition: transform 200ms ease-in-out;
+    &:hover{
+      transform: scale(1.2)
+    }
+  },
+  & .iconplay, .iconprev, .iconnext{
+    color: #fff;
+    font-size: 2.3rem;
+  }
 `
 
 const FooterRight = styled.div`

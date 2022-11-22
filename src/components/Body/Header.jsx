@@ -1,9 +1,12 @@
 import { Avatar } from '@material-ui/core';
 import Search from '@material-ui/icons/Search';
 import React from 'react';
+import { useSelector } from 'react-redux';
+import { selectUser } from '../../features/UserSlice';
 import { HeaderContainer, HeaderLeft, HeaderRight } from './styles';
 
 const Header = () => {
+  const user = useSelector(selectUser)
   return (
     <HeaderContainer>
       <HeaderLeft>
@@ -12,7 +15,7 @@ const Header = () => {
       </HeaderLeft>
       <HeaderRight>
         <Avatar />
-        <h4>Leo Frank</h4>
+        <h4>{user?.id}</h4>
       </HeaderRight>
     </HeaderContainer>
   );
