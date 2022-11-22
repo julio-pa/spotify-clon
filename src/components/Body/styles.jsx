@@ -61,8 +61,9 @@ const Info = styled.div`
 
 const InfoText = styled.div`
   flex: 1;
-  & h1{
+  & h2{
     margin-bottom: 10px;
+    font-size: 5rem;
   }
 `
 

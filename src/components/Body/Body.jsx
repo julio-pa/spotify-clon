@@ -3,7 +3,7 @@ import Header from './Header';
 import { BodyContainer, Icons, Info, InfoText, Songs } from './styles';
 import { useSelector } from 'react-redux';
 import { selectPlaylist } from '../../features/PlaylistSlice';
-import { Favorite, MoreHoriz, PlayCircleFilled } from '@material-ui/icons';
+import { Favorite, MoreHoriz, PlayCircleFilled, PlaylistAdd } from '@material-ui/icons';
 import SongsRow from './SongsRow';
 
 
@@ -18,9 +18,9 @@ const Body = () => {
         <InfoText>
           <h4>playlist</h4>
           <h2>
-            Discover Weekly
+            {playlist?.name}
           </h2>
-          <p>{playlist?.name }</p>
+          <p><b>Chris Brown</b> y más</p>
         </InfoText>
       </Info>
       <Songs>
