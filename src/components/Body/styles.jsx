@@ -7,7 +7,7 @@ const BodyContainer = styled.div`
   height: 100vh;
   padding: 30px;
   overflow-y: overlay;
-  &::webkit-scrollbar{
+  &::-webkit-scrollbar{
     display: none;
   }
 `

@@ -21,12 +21,14 @@ function App() {
   useEffect(() => {
     const hash = getTokenFromURL();
     const _token = hash.access_token;
+
     if (_token) {
-      dispatch(SET_TOKEN(_token))
+      dispatch(SET_TOKEN(_token));
       spotify.setAccessToken(_token);
       spotify.getMe().then(user => dispatch(SET_USER(user)));
       console.log(token);
-      spotify.getPlaylist("37i9dQZF1EQoqCH7BwIYb7").then(playlist => 
+      spotify.getPlaylist("37i9dQZF1EQoqCH7BwIYb7")
+      .then(playlist => 
         dispatch(SET_PLAYLIST(playlist)))
     }
 

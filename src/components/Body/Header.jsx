@@ -14,7 +14,7 @@ const Header = () => {
         <input type='text' placeholder='Search for Artist, Songs, or other' />
       </HeaderLeft>
       <HeaderRight>
-        <Avatar />
+        <Avatar src={user?.images[0].url} alt={user?.id}/>
         <h4>{user?.id}</h4>
       </HeaderRight>
     </HeaderContainer>
