@@ -10,7 +10,7 @@ export const getTokenFromURL = () =>{
 
 const endpoint = "https://accounts.spotify.com/authorize";
 const clientID = "ff5de3d4d68244d9b8b49283a3e81828"
-const redirectUri = "http://localhost:3000/"
+const redirectUri = "https://spotify-clone-ee722.web.app/"
 const scopes =["user-read-currently-playing",
   "user-read-recently-played",
   "user-read-playback-state",
